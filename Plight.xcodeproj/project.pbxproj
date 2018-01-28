@@ -20,6 +20,7 @@
 		8851E1F8201D87B700C8B8BF /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851E1F7201D87B700C8B8BF /* MapVC.swift */; };
 		8851E1FC201DE13500C8B8BF /* Hospital.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8851E1FB201DE13500C8B8BF /* Hospital.scn */; };
 		8851E1FE201DE5A900C8B8BF /* HealingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851E1FD201DE5A900C8B8BF /* HealingVC.swift */; };
+		88D70930201E26CA0090A97A /* siren.wav in Resources */ = {isa = PBXBuildFile; fileRef = 88D7092F201E26CA0090A97A /* siren.wav */; };
 		F5A0CC672B694290F86E6922 /* Pods_Plight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D36679B90CF6666D9F1535 /* Pods_Plight.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		8851E1F7201D87B700C8B8BF /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		8851E1FB201DE13500C8B8BF /* Hospital.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Hospital.scn; sourceTree = "<group>"; };
 		8851E1FD201DE5A900C8B8BF /* HealingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealingVC.swift; sourceTree = "<group>"; };
+		88D7092F201E26CA0090A97A /* siren.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = siren.wav; sourceTree = "<group>"; };
 		9C84ED9C0FC9BC3A8F09151C /* Pods-Plight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plight/Pods-Plight.debug.xcconfig"; sourceTree = "<group>"; };
 		C5D36679B90CF6666D9F1535 /* Pods_Plight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 		8851E1D4201D130D00C8B8BF /* Plight */ = {
 			isa = PBXGroup;
 			children = (
+				88D7092F201E26CA0090A97A /* siren.wav */,
 				8851E1EC201D14DE00C8B8BF /* Controller */,
 				8851E1EB201D14DA00C8B8BF /* View */,
 				8851E1EA201D14D300C8B8BF /* Model */,
@@ -202,6 +205,7 @@
 				8851E1E3201D130D00C8B8BF /* LaunchScreen.storyboard in Resources */,
 				8851E1FC201DE13500C8B8BF /* Hospital.scn in Resources */,
 				8851E1E0201D130D00C8B8BF /* Assets.xcassets in Resources */,
+				88D70930201E26CA0090A97A /* siren.wav in Resources */,
 				8851E1DB201D130D00C8B8BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +413,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C85HD75Z6W;
 				INFOPLIST_FILE = Plight/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appimas24.Plight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,7 +429,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C85HD75Z6W;
 				INFOPLIST_FILE = Plight/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appimas24.Plight;
 				PRODUCT_NAME = "$(TARGET_NAME)";

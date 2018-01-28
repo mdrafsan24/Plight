@@ -9,12 +9,27 @@
 import UIKit
 import Firebase
 import CoreLocation
+import AVFoundation
+
 
 class UserProfileVC: UIViewController, CLLocationManagerDelegate {
+    
+    //---------
+    @IBOutlet weak var newsLbl: UILabel!
+    @IBOutlet weak var newsIcon: UIImageView!
+    @IBOutlet weak var pointsLbl: RoundButton!
+    
+    @IBOutlet weak var hospitalLbl: UIButton!
+    @IBOutlet weak var mobileMap: UIButton!
+    //---------
 
     private var locationManager: CLLocationManager!
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var userImage: UIImageView!
+    
+    @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var warningLbl: UILabel!
+    var player: AVAudioPlayer?
     
     @IBOutlet weak var virus: UILabel!
     @IBOutlet weak var immunity: UILabel!
@@ -98,17 +113,28 @@ class UserProfileVC: UIViewController, CLLocationManagerDelegate {
             if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshots {
                     if let dict = snap.value as? NSDictionary! {
-                        if let latitudeDict = dict["latitude"] as? NSDictionary {
-                            if let longitudeDict = dict["longitude"] as? NSDictionary {
-                                print(latitudeDict["latitude"]!,longitudeDict["longitude"]!)
+                            if let latitudeDict = dict["latitude"] as? NSDictionary {
+                                if let longitudeDict = dict["longitude"] as? NSDictionary {
+                                    print(latitudeDict["latitude"]!,longitudeDict["longitude"]!)
                                 
-                                let distanceInMeters = self.coordinateUser.distance(from: CLLocation(latitude: latitudeDict["latitude"]! as! CLLocationDegrees, longitude: longitudeDict["longitude"]! as! CLLocationDegrees))
+                                    let distanceInMeters = self.coordinateUser.distance(from: CLLocation(latitude: latitudeDict["latitude"]! as! CLLocationDegrees, longitude: longitudeDict["longitude"]! as! CLLocationDegrees))
                                 
-                                if distanceInMeters < 1.0 {
-                                    print(dict["userName"])
+                                    if distanceInMeters < 2.0 {
+                                        print(dict["userName"]!, "is nearby")
+                                        self.playSound()
+                                        self.newsLbl.isHidden = true
+                                        self.newsIcon.isHidden = true
+                                        self.pointsLbl.isHidden = true
+                                        self.hospitalLbl.isHidden = true
+                                        self.mobileMap.isHidden = true
+                                    
+                                        self.warningLbl.text = "\(dict["userName"]!) is nearby, press shield 12 times!"
+                                        self.warningLbl.isHidden = false
+                                        self.timer.isHidden = false
+                                    }
                                 }
                             }
-                        }
+                        
                     }
                     
                 }
@@ -120,7 +146,43 @@ class UserProfileVC: UIViewController, CLLocationManagerDelegate {
     }
     
     
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "siren", withExtension: "wav") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+            
+            guard let player = player else { return }
+            
+            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
     
+    var shieldPressedTracker = 0
+    @IBAction func shieldPressed(_ sender: Any) {
+        self.shieldPressedTracker = self.shieldPressedTracker + 1
+        if self.shieldPressedTracker == 12 {
+            self.warningLbl.isHidden = true
+            self.timer.isHidden = true
+            self.newsLbl.isHidden = false
+            self.newsIcon.isHidden = false
+            self.pointsLbl.isHidden = false
+            self.hospitalLbl.isHidden = false
+            self.mobileMap.isHidden = false
+        }
+    }
     
 
 }

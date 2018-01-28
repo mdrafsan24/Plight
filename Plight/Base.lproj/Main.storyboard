@@ -16,6 +16,9 @@
         <array key="AvenirNext.ttc">
             <string>AvenirNext-DemiBold</string>
         </array>
+        <array key="Damascus.ttc">
+            <string>DamascusBold</string>
+        </array>
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Medium</string>
@@ -236,7 +239,31 @@
                                     <constraint firstAttribute="height" constant="90" id="p5J-fQ-Knt"/>
                                 </constraints>
                                 <state key="normal" image="Shield"/>
+                                <connections>
+                                    <action selector="shieldPressed:" destination="e21-Wz-pwb" eventType="touchUpInside" id="D76-6O-zG4"/>
+                                </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tony is nearby! Press the shield button 10 times!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dal-f6-8a4">
+                                <rect key="frame" x="12" y="374" width="351" height="116"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="351" id="d0O-Fc-OyC"/>
+                                    <constraint firstAttribute="height" constant="116" id="dyS-2F-IeA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEz-lx-URK">
+                                <rect key="frame" x="240" y="498" width="127" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="UHA-bh-aQG"/>
+                                    <constraint firstAttribute="height" constant="65" id="mH8-ey-rzB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qf-VJ-s7O">
                                 <rect key="frame" x="269" y="483" width="90" height="90"/>
                                 <constraints>
@@ -299,17 +326,21 @@
                         <constraints>
                             <constraint firstItem="j4L-KX-f5S" firstAttribute="centerX" secondItem="o3X-sk-Zos" secondAttribute="centerX" id="3P9-Uy-Qpo"/>
                             <constraint firstItem="6I5-zG-QIo" firstAttribute="top" secondItem="Zcu-Wf-7Hx" secondAttribute="bottom" constant="15" id="7id-WN-kLb"/>
+                            <constraint firstItem="Dal-f6-8a4" firstAttribute="centerX" secondItem="o3X-sk-Zos" secondAttribute="centerX" id="9CL-hY-1HV"/>
                             <constraint firstItem="6QS-qb-rYV" firstAttribute="bottom" secondItem="e5D-3J-Lkt" secondAttribute="bottom" constant="20" id="9mG-bg-t5y"/>
                             <constraint firstItem="l9p-nK-flL" firstAttribute="leading" secondItem="6QS-qb-rYV" secondAttribute="leading" constant="16" id="Gne-mX-TKO"/>
                             <constraint firstItem="gbq-Ek-6XJ" firstAttribute="top" secondItem="St7-RF-qEJ" secondAttribute="bottom" constant="30" id="Hre-h8-tFB"/>
                             <constraint firstItem="6I5-zG-QIo" firstAttribute="centerX" secondItem="o3X-sk-Zos" secondAttribute="centerX" id="JVr-l5-kzj"/>
                             <constraint firstItem="gbq-Ek-6XJ" firstAttribute="leading" secondItem="6QS-qb-rYV" secondAttribute="leading" constant="16" id="Jv6-pb-abP"/>
                             <constraint firstItem="St7-RF-qEJ" firstAttribute="centerX" secondItem="o3X-sk-Zos" secondAttribute="centerX" id="K30-Xr-aPy"/>
+                            <constraint firstItem="Dal-f6-8a4" firstAttribute="top" secondItem="St7-RF-qEJ" secondAttribute="bottom" constant="27.5" id="LNC-cg-V3y"/>
+                            <constraint firstItem="6QS-qb-rYV" firstAttribute="trailing" secondItem="OEz-lx-URK" secondAttribute="trailing" constant="8" id="Lsu-z2-gmb"/>
                             <constraint firstItem="e5D-3J-Lkt" firstAttribute="top" secondItem="l9p-nK-flL" secondAttribute="bottom" constant="8" id="NU5-XC-vUU"/>
                             <constraint firstItem="6QS-qb-rYV" firstAttribute="trailing" secondItem="0dp-v7-fxy" secondAttribute="trailing" id="Oex-lG-v79"/>
                             <constraint firstItem="St7-RF-qEJ" firstAttribute="top" secondItem="fG4-mh-VAt" secondAttribute="bottom" constant="20" id="Q1p-ZB-5hp"/>
                             <constraint firstItem="e5D-3J-Lkt" firstAttribute="trailing" secondItem="6QS-qb-rYV" secondAttribute="trailing" id="UT2-BY-ZNI"/>
                             <constraint firstItem="fG4-mh-VAt" firstAttribute="top" secondItem="0dp-v7-fxy" secondAttribute="bottom" constant="8" id="VDf-If-aco"/>
+                            <constraint firstItem="OEz-lx-URK" firstAttribute="top" secondItem="Dal-f6-8a4" secondAttribute="bottom" constant="8" id="VMc-eB-CT9"/>
                             <constraint firstItem="6QS-qb-rYV" firstAttribute="trailing" secondItem="1qf-VJ-s7O" secondAttribute="trailing" constant="16" id="XHL-II-LHx"/>
                             <constraint firstItem="Zcu-Wf-7Hx" firstAttribute="leading" secondItem="gbq-Ek-6XJ" secondAttribute="trailing" constant="8" id="XTV-Cx-EBe"/>
                             <constraint firstItem="6QS-qb-rYV" firstAttribute="trailing" secondItem="fG4-mh-VAt" secondAttribute="trailing" constant="8" id="azY-nw-jow"/>
@@ -326,10 +357,17 @@
                         <viewLayoutGuide key="safeArea" id="6QS-qb-rYV"/>
                     </view>
                     <connections>
+                        <outlet property="hospitalLbl" destination="1qf-VJ-s7O" id="TW1-ib-Tbl"/>
                         <outlet property="immunity" destination="Nwk-wD-jhn" id="BJV-VS-jx0"/>
+                        <outlet property="mobileMap" destination="l9p-nK-flL" id="L3X-ZO-FEo"/>
+                        <outlet property="newsIcon" destination="gbq-Ek-6XJ" id="nC3-eQ-9bc"/>
+                        <outlet property="newsLbl" destination="Zcu-Wf-7Hx" id="tUg-aO-Pd8"/>
+                        <outlet property="pointsLbl" destination="6I5-zG-QIo" id="Iqp-za-Jq2"/>
+                        <outlet property="timer" destination="OEz-lx-URK" id="MR7-2U-7f5"/>
                         <outlet property="userImage" destination="572-lW-BBQ" id="V3Y-ZS-U2f"/>
                         <outlet property="userNameLbl" destination="0dp-v7-fxy" id="zUc-g1-5QL"/>
                         <outlet property="virus" destination="2eV-Re-KKN" id="WEv-86-UMg"/>
+                        <outlet property="warningLbl" destination="Dal-f6-8a4" id="2MZ-b2-bBF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNs-Ol-oWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
