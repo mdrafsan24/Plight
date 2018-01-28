@@ -17,6 +17,9 @@
 		8851E1F2201D1C6900C8B8BF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851E1F1201D1C6900C8B8BF /* RoundButton.swift */; };
 		8851E1F4201D2BE500C8B8BF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851E1F3201D2BE500C8B8BF /* SignUpVC.swift */; };
 		8851E1F6201D6B2900C8B8BF /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851E1F5201D6B2900C8B8BF /* UserProfileVC.swift */; };
+		8851E1F8201D87B700C8B8BF /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851E1F7201D87B700C8B8BF /* MapVC.swift */; };
+		8851E1FC201DE13500C8B8BF /* Hospital.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8851E1FB201DE13500C8B8BF /* Hospital.scn */; };
+		8851E1FE201DE5A900C8B8BF /* HealingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851E1FD201DE5A900C8B8BF /* HealingVC.swift */; };
 		F5A0CC672B694290F86E6922 /* Pods_Plight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D36679B90CF6666D9F1535 /* Pods_Plight.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,9 @@
 		8851E1F1201D1C6900C8B8BF /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		8851E1F3201D2BE500C8B8BF /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		8851E1F5201D6B2900C8B8BF /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		8851E1F7201D87B700C8B8BF /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		8851E1FB201DE13500C8B8BF /* Hospital.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Hospital.scn; sourceTree = "<group>"; };
+		8851E1FD201DE5A900C8B8BF /* HealingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealingVC.swift; sourceTree = "<group>"; };
 		9C84ED9C0FC9BC3A8F09151C /* Pods-Plight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plight/Pods-Plight.debug.xcconfig"; sourceTree = "<group>"; };
 		C5D36679B90CF6666D9F1535 /* Pods_Plight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +87,7 @@
 				8851E1E4201D130D00C8B8BF /* Info.plist */,
 				8851E1DC201D130D00C8B8BF /* Plight.xcdatamodeld */,
 				8851E1ED201D16EB00C8B8BF /* GoogleService-Info.plist */,
+				8851E1FB201DE13500C8B8BF /* Hospital.scn */,
 			);
 			path = Plight;
 			sourceTree = "<group>";
@@ -106,6 +113,8 @@
 				8851E1D7201D130D00C8B8BF /* MainVC.swift */,
 				8851E1F3201D2BE500C8B8BF /* SignUpVC.swift */,
 				8851E1F5201D6B2900C8B8BF /* UserProfileVC.swift */,
+				8851E1F7201D87B700C8B8BF /* MapVC.swift */,
+				8851E1FD201DE5A900C8B8BF /* HealingVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +200,7 @@
 			files = (
 				8851E1EE201D16EB00C8B8BF /* GoogleService-Info.plist in Resources */,
 				8851E1E3201D130D00C8B8BF /* LaunchScreen.storyboard in Resources */,
+				8851E1FC201DE13500C8B8BF /* Hospital.scn in Resources */,
 				8851E1E0201D130D00C8B8BF /* Assets.xcassets in Resources */,
 				8851E1DB201D130D00C8B8BF /* Main.storyboard in Resources */,
 			);
@@ -254,7 +264,9 @@
 				8851E1F2201D1C6900C8B8BF /* RoundButton.swift in Sources */,
 				8851E1D8201D130D00C8B8BF /* MainVC.swift in Sources */,
 				8851E1DE201D130D00C8B8BF /* Plight.xcdatamodeld in Sources */,
+				8851E1FE201DE5A900C8B8BF /* HealingVC.swift in Sources */,
 				8851E1F4201D2BE500C8B8BF /* SignUpVC.swift in Sources */,
+				8851E1F8201D87B700C8B8BF /* MapVC.swift in Sources */,
 				8851E1D6201D130D00C8B8BF /* AppDelegate.swift in Sources */,
 				8851E1F6201D6B2900C8B8BF /* UserProfileVC.swift in Sources */,
 			);
@@ -397,6 +409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C85HD75Z6W;
 				INFOPLIST_FILE = Plight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appimas24.Plight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,6 +426,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C85HD75Z6W;
 				INFOPLIST_FILE = Plight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appimas24.Plight;
 				PRODUCT_NAME = "$(TARGET_NAME)";

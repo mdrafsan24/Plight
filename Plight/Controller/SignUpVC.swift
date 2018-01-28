@@ -64,7 +64,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     let immunity = self.viruses[Int(arc4random_uniform(4))]
                     let userName = self.userName.text
                     let gender = self.gender.text
-                    self.ref.child("UserDB").child((user?.uid)!).setValue(["userName": userName, "gender": gender, "virus" : virus, "immunity" : immunity])
+                    self.ref.child("UserDB").child((user?.uid)!).setValue(["userName": userName, "gender": gender, "virus" : virus, "immunity" : immunity, "longitude" : 0, "latitude" : 0])
                     self.dismiss(animated: true, completion: nil)
                 }
             })
